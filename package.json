@@ -1,0 +1,42 @@
+{
+  "name": "country-locator",
+  "version": "1.0.7",
+  "description": "Detects country by given coordinate",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "files": [
+    "dist",
+    "countries.geojson"
+  ],
+  "keywords": [
+    "reverse",
+    "geocoding",
+    "geocode",
+    "locate",
+    "country"
+  ],
+  "author": "Carmi Raz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carmi2214/country-locator.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "jsonfile": "^6.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/jsonfile": "^5.0.0",
+    "jest": "^25.4.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
+}
