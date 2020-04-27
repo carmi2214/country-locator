@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - 12.9.1
 
-before_install:
-  - npm install -g typescript
+before_deploy:
+  - npm install
 
 jobs:
   include:
