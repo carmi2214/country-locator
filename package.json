@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepack": "npm run build",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
     "test": "jest"
   },
   "files": [
