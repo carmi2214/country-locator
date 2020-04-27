@@ -3,10 +3,6 @@ language: node_js
 node_js:
   - 12.9.1
 
-before_deploy:
-  - npm install
-  - npm install --global typescript
-
 jobs:
   include:
     - stage: test
