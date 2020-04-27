@@ -7,11 +7,11 @@ jobs:
   include:
     - stage: test
       script: npm run test
-#    - stage: npm publish
-#      script: echo "Deploying to npm ..."
-#      deploy:
-#        provider: npm
-#        email: "$NPM_AUTH_EMAIL"
-#        api_key: "$NPM_AUTH_TOKEN"
-#      on:
-#        branch: master
+    - stage: npm publish
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        email: "$NPM_AUTH_EMAIL"
+        api_key: "$NPM_AUTH_TOKEN"
+      on:
+        branch: master

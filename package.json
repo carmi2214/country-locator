@@ -1,11 +1,12 @@
 {
   "name": "country-locator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Detects country by given coordinate",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepack": "npm run build",
     "test": "jest"
   },
   "files": [
@@ -17,7 +18,9 @@
     "geocoding",
     "geocode",
     "locate",
-    "country"
+    "country",
+    "countries",
+    "coordinate"
   ],
   "author": "Carmi Raz",
   "license": "MIT",
