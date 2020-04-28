@@ -4,11 +4,7 @@ export interface CountryFeature {
         type: 'Point' | 'MultiPoint' | 'LineString' | 'MultiLineString' | 'Polygon' | 'MultiPolygon' | 'GeometryCollection',
         coordinates: any[],
     },
-    properties: {
-        ADMIN: string,
-        ISO_A3: string,
-        ISO_A2: string,
-    },
+    properties: any,
 }
 
 export interface CountriesGeoJson {
@@ -19,14 +15,4 @@ export interface CountriesGeoJson {
 export interface CountryInfo {
     code: string,
     name: string,
-}
-
-export interface Coordinate {
-    latitude: number,
-    longitude: number,
-}
-
-export interface Point {
-    x: number,
-    y: number,
 }

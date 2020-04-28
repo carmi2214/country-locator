@@ -1,12 +1,11 @@
-import {findCountryByCoordinate} from "./country-locator";
-import {validateCoordinate} from "./coordinate-validation";
+import {findCountryByCoordinate} from "./find-country-by-coordinate";
+import {validateCoordinate} from "../validation/coordinate-validation";
 import {mocked} from 'ts-jest/utils';
 
-jest.mock('./coordinate-validation', () => ({
+jest.mock('../validation/coordinate-validation', () => ({
     validateCoordinate: jest.fn()
-        .mockImplementation(jest.requireActual('./coordinate-validation').validateCoordinate)
+        .mockImplementation(jest.requireActual('../validation/coordinate-validation').validateCoordinate)
 }));
-
 const validateCoordinateMock = mocked(validateCoordinate);
 
 describe('findCountryByCoordinate tests', function () {
@@ -39,7 +38,7 @@ describe('findCountryByCoordinate tests', function () {
             expect(countryInfo?.code).toBe('ISR');
         });
         test('a coordinate in Crete should give Greece', () => {
-            const countryInfo = findCountryByCoordinate(35.309385, 24.853544);
+            const countryInfo = findCountryByCoordinate([24.853544, 35.309385]);
             expect(countryInfo?.name).toBe('Greece');
             expect(countryInfo?.code).toBe('GRC');
         });
@@ -49,7 +48,7 @@ describe('findCountryByCoordinate tests', function () {
             expect(countryInfo?.code).toBe('PSE');
         });
         test('a coordinate in Hawaii should give USA', () => {
-            const countryInfo = findCountryByCoordinate(21.317146, -157.863991);
+            const countryInfo = findCountryByCoordinate([-157.863991, 21.317146]);
             expect(countryInfo?.name).toBe('United States of America');
             expect(countryInfo?.code).toBe('USA');
         });
