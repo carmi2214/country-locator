@@ -29,7 +29,7 @@ console.log(countryInfo?.code); // GBR
 You can also call it as a **point** - an array of `[x, y]`<br />
 **PAY ATTENTION - `x == longitude` and `y == latitude`**
 ```typescript
-const countryInfo = findCountriesByPolygon([-0.125168, 51.500760]);
+const countryInfo = findCountryByCoordinate([-0.125168, 51.500760]);
 
 console.log(countryInfo?.name); // United Kingdom
 console.log(countryInfo?.code); // GBR
