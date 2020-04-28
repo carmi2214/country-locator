@@ -1,7 +1,7 @@
 {
   "name": "country-locator",
   "version": "2.0.0",
-  "description": "Detects country by given coordinate",
+  "description": "Detects country by a given geometry",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
