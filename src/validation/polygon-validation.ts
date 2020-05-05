@@ -7,7 +7,7 @@ export const validatePolygon = (polygon: number[][]): Feature<Polygon> => {
     polygon.forEach(vertex => {
         if (!vertex) throw validationError;
         const [x, y] = vertex;
-        if (!x || !y) throw validationError;
+        if (!x && x !== 0 || !y && y !== 0) throw validationError;
         if (typeof x !== 'number' || typeof y !== 'number') throw validationError;
     });
     return createPolygon([polygon])

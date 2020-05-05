@@ -31,6 +31,9 @@ describe('validatePolygon tests', () => {
     test('received array that contains array with more numbers than needed - does NOT throw', () => {
         expect(() => validatePolygon([[9, 8], [1, 2], [8, 9], [4, 5, 6], [9, 8]] as any)).not.toThrow();
     });
+    test('received array that contains zeros - does NOT throw', () => {
+        expect(() => validatePolygon([[0, 0], [1, 2], [8, 9], [4, 5], [0, 0]] as any)).not.toThrow();
+    });
     test('received valid polygon - does NOT throw', () => {
         expect(() => validatePolygon([[9, 8], [1, 2], [4, 5], [9, 8]] as any)).not.toThrow();
     });
