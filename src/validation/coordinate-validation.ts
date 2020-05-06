@@ -9,7 +9,7 @@ export const validateCoordinate = (pointOrLat: number[] | number, longitude?: nu
         point = createPoint([longitude, pointOrLat]);
     } else if (Array.isArray(pointOrLat)) {
         const [x, y] = pointOrLat;
-        if (!x || !y) throw validationError;
+        if (!x && x !== 0 || !y && y !== 0) throw validationError;
         if (typeof x !== 'number' || typeof y !== 'number') {
             throw validationError;
         }
