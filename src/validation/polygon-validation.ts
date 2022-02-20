@@ -1,4 +1,4 @@
-import {POLYGON_VALIDATION_ERROR_MESSAGE} from "../constants/error-messages";
+import {POLYGON_VALIDATION_ERROR_MESSAGE} from "../common/constants/error-messages";
 import {polygon as createPolygon, Polygon, Feature} from "@turf/helpers";
 
 export const validatePolygon = (polygon: number[][]): Feature<Polygon> => {

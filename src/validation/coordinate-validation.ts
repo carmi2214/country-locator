@@ -1,4 +1,4 @@
-import {COORDINATE_VALIDATION_ERROR_MESSAGE} from "../constants/error-messages";
+import {COORDINATE_VALIDATION_ERROR_MESSAGE} from "../common/constants/error-messages";
 import {point as createPoint, Point, Feature} from '@turf/helpers';
 
 export const validateCoordinate = (pointOrLat: number[] | number, longitude?: number): Feature<Point> => {

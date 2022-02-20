@@ -1,8 +1,9 @@
 import {CountryInfo, CountryFeature} from "../types";
 import intersect from '@turf/intersect';
 import {polygon as createPolygon, Polygon, Feature} from '@turf/helpers';
-import {COUNTRIES_GEO_JSON, NOT_A_COUNTRY_CODE} from "../constants/all-countries";
+import {COUNTRIES_GEO_JSON, NOT_A_COUNTRY_CODE} from "../common/constants/all-countries";
 import {validatePolygon} from "../validation/polygon-validation";
+import {extractCountryInfoFromCountryFeature} from "../common/utils/countries-geojson-utils";
 
 const countryIntersectsWithPolygon = (country: CountryFeature, polygon: Feature<Polygon>): boolean => {
     const {properties, geometry} = country;
@@ -36,8 +37,5 @@ export function findCountriesByPolygon(polygon: number[][]): CountryInfo[] {
     const validPolygon = validatePolygon(polygon);
     const countriesInIntersection = COUNTRIES_GEO_JSON.features
         .filter(country => countryIntersectsWithPolygon(country, validPolygon));
-    return countriesInIntersection.map(country => ({
-        name: country.properties.ADMIN,
-        code: country.properties.ISO_A3
-    }));
+    return countriesInIntersection.map(extractCountryInfoFromCountryFeature);
 }

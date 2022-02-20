@@ -12,18 +12,26 @@ const validatePolygonMock = mocked(validatePolygon);
 const usaCountryInfo: CountryInfo = {
     name: 'United States of America',
     code: 'USA',
+    isoA3Code: 'USA',
+    isoA2Code: 'US',
 };
 const mexicoCountryInfo: CountryInfo = {
     name: 'Mexico',
     code: 'MEX',
+    isoA3Code: 'MEX',
+    isoA2Code: 'MX',
 };
 const canadaCountryInfo: CountryInfo = {
     name: 'Canada',
     code: 'CAN',
+    isoA3Code: 'CAN',
+    isoA2Code: 'CA',
 };
 const bahamasCountryInfo: CountryInfo = {
     name: 'The Bahamas',
     code: 'BHS',
+    isoA3Code: 'BHS',
+    isoA2Code: 'BS',
 };
 
 describe('findCountriesByPolygon tests', () => {

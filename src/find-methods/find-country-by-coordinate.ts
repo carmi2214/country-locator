@@ -1,8 +1,9 @@
 import {CountryFeature, CountryInfo} from "../types";
 import {validateCoordinate} from "../validation/coordinate-validation";
-import {COUNTRIES_GEO_JSON} from "../constants/all-countries";
+import {COUNTRIES_GEO_JSON} from "../common/constants/all-countries";
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 import {polygon, multiPolygon, Point, Feature} from '@turf/helpers';
+import {extractCountryInfoFromCountryFeature} from "../common/utils/countries-geojson-utils";
 
 /**
  * Determines if a given point is in a territory of a country or not
@@ -39,9 +40,5 @@ export function findCountryByCoordinate(pointOrLat: number[] | number, longitude
 
     if (!countryFound) return;
 
-    const {ISO_A3: code, ADMIN: name} = countryFound.properties;
-    return {
-        code,
-        name
-    };
+    return extractCountryInfoFromCountryFeature(countryFound);
 }

@@ -1,6 +1,6 @@
 {
   "name": "country-locator",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Detects country by a given geometry",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,6 +42,7 @@
     "@types/jest": "^25.2.1",
     "@types/jsonfile": "^5.0.0",
     "jest": "^25.4.0",
+    "semantic-release": "^19.0.2",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   }

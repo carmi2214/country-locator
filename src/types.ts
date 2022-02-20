@@ -15,4 +15,6 @@ export interface CountriesGeoJson {
 export interface CountryInfo {
     code: string,
     name: string,
+    isoA2Code: string;
+    isoA3Code: string;
 }
