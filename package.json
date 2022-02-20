@@ -28,9 +28,6 @@
     "type": "git",
     "url": "git+https://github.com/carmi2214/country-locator.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^6.0.1",
     "@turf/helpers": "^6.1.4",
