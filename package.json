@@ -36,6 +36,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "@types/jest": "^27.4.0",
     "@types/jsonfile": "^5.0.2",
     "jest": "^27.5.1",
