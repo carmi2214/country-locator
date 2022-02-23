@@ -11,12 +11,12 @@ describe('validateCoordinate tests', () => {
     ])('latitude is %s, longitude is %s', (latitude: any, longitude: any) => {
         test('should throw if latitude or longitude are not numbers, sending as array', () => {
             expect(() => validateCoordinate([longitude, latitude]))
-                .toThrow(`Invalid arguments were given. Must send either a point as array or lat & long as numbers.`);
+                .toThrow(`Invalid arguments were given. Must send either a point as an array or lat & long as numbers.`);
         });
 
         test('should throw if latitude or longitude are not numbers, sending as numbers', () => {
             expect(() => validateCoordinate(latitude, longitude))
-                .toThrow(`Invalid arguments were given. Must send either a point as array or lat & long as numbers.`);
+                .toThrow(`Invalid arguments were given. Must send either a point as an array or lat & long as numbers.`);
         });
     });
     describe.each([
