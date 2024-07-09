@@ -1,6 +1,6 @@
 import {findCountryByCoordinate} from "./find-country-by-coordinate";
 import {validateCoordinate} from "../validation/coordinate-validation";
-import {mocked} from 'ts-jest/utils';
+import {mocked} from "jest-mock";
 
 jest.mock('../validation/coordinate-validation', () => ({
     validateCoordinate: jest.fn()
