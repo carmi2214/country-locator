@@ -1,6 +1,6 @@
 import {findCountriesByPolygon} from "./find-countries-by-polygon";
 import {CountryInfo} from "../types";
-import {mocked} from "ts-jest/utils";
+import {mocked} from "jest-mock";
 import {validatePolygon} from "../validation/polygon-validation";
 
 jest.mock('../validation/polygon-validation', () => ({
